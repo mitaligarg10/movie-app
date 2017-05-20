@@ -1,0 +1,26 @@
+<!-- <ul *ngFor="let a of movies"> 
+    <li>{{a.Title}}</li>
+    <li>{{a.Year}}</li>
+    <li><img src="{{a.Poster}}"></li>
+
+</ul> -->
+<md-grid-list cols="4" rowHeight="1:2">
+<div *ngFor="let movie of movies">
+<md-grid-tile>
+<md-card  class="card">
+<md-card-header>
+<!-- <div md-card-avatar></div> -->
+<md-card-title>{{movie.Title}}</md-card-title>
+<md-card-title>{{movie.Year}}</md-card-title>
+<md-card-title>{{movie.imdbID}}</md-card-title>
+</md-card-header>
+<img md-card-image src="{{movie.Poster}}">
+
+<md-card-actions>
+<button md-button id="update" >Update</button>
+<button md-button id="delete" >Delete</button>
+</md-card-actions>
+</md-card>
+</md-grid-tile>
+</div>
+</md-grid-list>
